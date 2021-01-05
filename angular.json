@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "scowsite"
+    }
+  },
+  "defaultProject": "scowsite",
+  "cli": {
+    "analytics": "1b0ad61c-192e-45d2-b0fe-150be638ee95"
+  }
 }
