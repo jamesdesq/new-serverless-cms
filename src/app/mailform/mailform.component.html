@@ -1,0 +1,17 @@
+<div class="col-10 offset-1">
+    <form  [formGroup]="contactForm" (ngSubmit)="sendMail()">
+        <div class="form-group">
+            <label for="contact-form--name">Name</label>
+            <input type="text" class="form-control" placeholder="Full name" formControlName="name">
+          </div>
+        <div class="form-group">
+            <label for="contact-form--email">Email address</label>
+            <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="contact-form--textarea">Message</label>
+            <textarea class="form-control" rows="5" formControlName="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>   
+</div>
