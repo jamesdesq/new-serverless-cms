@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Forms
+
+The forms were built using Angular Reactive Forms: 
+
+https://angular.io/guide/reactive-forms
+
+This article proved quite useful: 
+
+https://www.smashingmagazine.com/2018/05/building-serverless-contact-form-static-website/
+
