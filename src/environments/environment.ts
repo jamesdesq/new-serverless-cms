@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mailSubmitUrl: '',
+  space: '1mmxh79hkgb8',
+  accessToken: 'aNcvmHGZJUxPs98d54_rKOdnuTJDlPqmXXqgB1HnLAs',
+  defaultImageUrl: '',
 };
 
 /*

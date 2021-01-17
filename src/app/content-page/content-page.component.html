@@ -1,5 +1,41 @@
 <div class="col-10 offset-1">
-<h2>Thanks for your email!</h2>
-<p>Unless you're a robot or you were being sarcastic.</p>
-<a [routerLink]="['/']">Back to main site</a>  
+    <div *ngIf="content">
+        <h1 [ngClass]="'first second'">{{content.title}}</h1>
+        <div class="mb-1 text-muted">Posted by Henry on {{ content.date | date: 'longDate' }}</div>
+        <script src="https://gist.github.com/jamesdesq/3786dd93e13a306874443ebd9e8a8bf8.js"></script>
+        <div *ngFor="let paragraph of content.bodyText">
+          <div [ngSwitch]="paragraph.type">
+            <p *ngSwitchCase="'paragraph'" innerHTML="{{ paragraph.text }}">
+            </p>
+            <h2 *ngSwitchCase="'heading-2'">
+              {{ paragraph.text }}
+            </h2>
+            <h3 *ngSwitchCase="'heading-3'">
+              {{ paragraph.text }}
+            </h3>
+            <ul *ngSwitchCase="'unordered-list'">
+              <li *ngFor = "let item of paragraph.text" [innerHTML]="item"></li>
+            </ul>
+            <div *ngSwitchCase="'image'">
+              <img src="{{paragraph.text}}">
+            </div>
+            <div class="code-container" *ngSwitchCase="'code'">
+              <pre><code class="rounded" innerHTML="{{ paragraph.text }}"></code></pre>
+            </div>
+            <div *ngSwitchCase="'app-popout-card'">
+              <app-popout-card [content]="paragraph.content"></app-popout-card>
+            </div>
+            <div *ngSwitchCase="'app-bar'">
+              <app-bar [content]="paragraph.content"></app-bar>
+            </div>
+            <div *ngSwitchCase="'bar-overlay'">
+              <app-bar-overlay [content]="paragraph.content"></app-bar-overlay>
+            </div>
+            <div *ngSwitchDefault></div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!content">
+        <h2>Nothing here...</h2>
+      </div>
 </div>

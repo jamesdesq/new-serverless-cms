@@ -7,7 +7,7 @@ import { MailformComponent } from './mailform/mailform.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'contact', component: MailformComponent },
-  { path: 'thanks', component: ContentPageComponent }
+  { path: ':any', component: ContentPageComponent }
 
 ];
 

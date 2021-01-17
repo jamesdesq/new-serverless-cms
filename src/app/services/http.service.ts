@@ -12,9 +12,7 @@ export class HttpService {
   }
 
   sendMessage(message: object): Observable<any> {
-    const url = 'https://8lopf4p70a.execute-api.eu-west-2.amazonaws.com/dev/static-site-mailer';
-
-    // this.http.post<any>(url, message)
+    const url = '';
 
     return this.http.post<any>(url, message);
   }

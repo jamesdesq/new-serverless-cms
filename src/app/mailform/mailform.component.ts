@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpService } from '../http.service';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-mailform',
