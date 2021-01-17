@@ -8,13 +8,17 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContentPageComponent } from './content-page/content-page.component';
 import { CommonModule } from '@angular/common';
+import { MenuComponent } from './menu/menu.component';
+import { TitlebarComponent } from './titlebar/titlebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MailformComponent,
     HomepageComponent,
-    ContentPageComponent
+    ContentPageComponent,
+    MenuComponent,
+    TitlebarComponent
   ],
   imports: [
     BrowserModule,
