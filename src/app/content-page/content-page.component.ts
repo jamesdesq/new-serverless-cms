@@ -12,6 +12,8 @@ import { IncludesFinderService } from '../services/includes-finder.service';
 })
 export class ContentPageComponent implements OnInit {
 
+  public contentType = 'page';
+
   public content = {
     title: '',
     bodyText: [],

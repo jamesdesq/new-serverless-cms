@@ -1,7 +1,7 @@
 <div class="col-10 offset-1">
     <div *ngIf="content">
         <h1 [ngClass]="'first second'">{{content.title}}</h1>
-        <div class="mb-1 text-muted">Posted by Henry on {{ content.date | date: 'longDate' }}</div>
+        <div *ngIf="contentType=='blog'" class="mb-1 text-muted">Posted by Henry on {{ content.date | date: 'longDate' }}</div>
         <script src="https://gist.github.com/jamesdesq/3786dd93e13a306874443ebd9e8a8bf8.js"></script>
         <div *ngFor="let paragraph of content.bodyText">
           <div [ngSwitch]="paragraph.type">
@@ -17,7 +17,9 @@
               <li *ngFor = "let item of paragraph.text" [innerHTML]="item"></li>
             </ul>
             <div *ngSwitchCase="'image'">
-              <img src="{{paragraph.text}}">
+              <div class="col-md-6 offset-md-3 col-sm-12">
+                <img src="{{paragraph.text}}">
+              </div>
             </div>
             <div class="code-container" *ngSwitchCase="'code'">
               <pre><code class="rounded" innerHTML="{{ paragraph.text }}"></code></pre>
