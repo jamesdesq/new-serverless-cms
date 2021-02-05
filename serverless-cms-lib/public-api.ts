@@ -1,0 +1,1 @@
+export * from './src/content-page/content-page.component';
