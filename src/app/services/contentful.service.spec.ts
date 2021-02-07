@@ -1,4 +1,4 @@
-import { async, inject, TestBed } from '@angular/core/testing';
+import { inject, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ContentfulService } from './contentful.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -13,7 +13,7 @@ describe('ContentfulService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('retrieves content from the API', (async(inject( [ContentfulService], ( contentfulService ) => {
+  it('retrieves content from the API', (waitForAsync(inject( [ContentfulService], ( contentfulService ) => {
     contentfulService.getContentItemByUrl().subscribe(result => expect(result.length).toBeGreaterThan(0));
   }))));
 });

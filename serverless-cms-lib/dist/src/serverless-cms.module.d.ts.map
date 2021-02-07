@@ -1,0 +1,1 @@
+{"version":3,"file":"serverless-cms.module.d.ts","sources":["serverless-cms.module.d.ts"],"names":[],"mappings":";;AAAA;;;AACA","sourcesContent":["export declare class ServerlessCmsModule {\n}\n"]}

@@ -9,9 +9,5 @@
             "entryFile": "public-api.ts"
         },
         "dest": "dist"
-    },
-    "devDependencies": {
-        "ng-packager": "^1.0.0",
-        "tsickle": "^0.39.1"
     }
 }
