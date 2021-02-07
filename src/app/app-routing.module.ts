@@ -6,10 +6,9 @@ import { MailformComponent } from './mailform/mailform.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomepageComponent },
+  { path: '', component: ContentPageComponent },
   { path: 'contact', component: MailformComponent },
   { path: ':any', component: ContentPageComponent }
-
 ];
 
 @NgModule({

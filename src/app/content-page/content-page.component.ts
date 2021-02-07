@@ -19,6 +19,8 @@ export class ContentPageComponent implements OnInit {
     date: null
   };
 
+  public showTitle = true;
+
   constructor(
     private router: Router,
     private contentfulService: ContentfulService,
@@ -29,17 +31,15 @@ export class ContentPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
     const url = this.router.url;
 
     const search = url.substr(1);
 
+    this.showTitle = search != "";
+
     const contentType = 'page'
     
     this.contentfulService.getContentItemByUrl(search, contentType).subscribe(data => {
-
-      console.log(data);
       
       let assets = {};
 
@@ -60,9 +60,7 @@ export class ContentPageComponent implements OnInit {
           this.content.title = content.fields.title;
           this.titleService.setTitle(content.fields.title);
 
-          console.log(content.fields.body);
           if (content.fields.body && content.fields.body.content) {
-
             this.content.bodyText = content.fields.body.content.map(data => {
                return this.contentFlattenerService.flatten(data, assets, entries); 
             });            

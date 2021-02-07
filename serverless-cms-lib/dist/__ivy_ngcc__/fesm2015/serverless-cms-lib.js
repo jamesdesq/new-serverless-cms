@@ -7,7 +7,7 @@ class HomepageComponent {
     }
 }
 HomepageComponent.ɵfac = function HomepageComponent_Factory(t) { return new (t || HomepageComponent)(); };
-HomepageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: HomepageComponent, selectors: [["app-homepage"]], decls: 35, vars: 0, consts: [[1, "col-10", "offset-1"], [1, "row"], [1, "row", "break"], [1, "col-8", "offset-2", "text-center"], ["src", "assets/cross_everything_cover.jpg", "alt", "Cover for Cross Everthing", 1, "img-fluid"], [1, "col-12"], [1, "card"], [1, "card-body"], [1, "blockquote", "mb-0"], [1, "blockquote-footer"], ["title", "Source Title"]], template: function HomepageComponent_Template(rf, ctx) { if (rf & 1) {
+HomepageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: HomepageComponent, selectors: [["app-homepage"]], decls: 24, vars: 0, consts: [[1, "col-10", "offset-1"], [1, "row"], [1, "row", "break"], [1, "col-8", "offset-2", "text-center"], ["src", "assets/cross_everything_cover.jpg", "alt", "Cover for Cross Everthing", 1, "img-fluid"], [1, "col-12"], [1, "card"], [1, "card-body"], [1, "blockquote", "mb-0"], [1, "blockquote-footer"], ["title", "Source Title"]], template: function HomepageComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵelementStart(2, "h2");
@@ -48,25 +48,6 @@ HomepageComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: HomepageComponent,
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementStart(24, "div", 2);
-        ɵngcc0.ɵɵelementStart(25, "div", 5);
-        ɵngcc0.ɵɵelementStart(26, "div", 6);
-        ɵngcc0.ɵɵelementStart(27, "div", 7);
-        ɵngcc0.ɵɵelementStart(28, "blockquote", 8);
-        ɵngcc0.ɵɵelementStart(29, "p");
-        ɵngcc0.ɵɵtext(30, "\"Sensitive and informed. Essential reading for anyone supporting a loved one through cancer.\"");
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementStart(31, "footer", 9);
-        ɵngcc0.ɵɵelementStart(32, "cite", 10);
-        ɵngcc0.ɵɵtext(33, "Deborah James");
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵtext(34, ", writer and broadcaster");
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } }, styles: [".break[_ngcontent-%COMP%], .card[_ngcontent-%COMP%]{padding-bottom:30px}"] });
 HomepageComponent.ctorParameters = () => [];
@@ -74,8 +55,45 @@ HomepageComponent.ctorParameters = () => [];
         type: Component,
         args: [{
                 selector: 'app-homepage',
-                template: "<div class=\"col-10 offset-1\">\n    <div class=\"row\">\n      <h2>Cross Everything</h2>\n    </div>\n    <div class=\"row break\"> \n    <p>Publishes 18th February 2021 on Bloomsbury/Green Tree</p>\n    </div>\n    <div class=\"row break\">\n      <p>Henry Scowcroft is an experienced, award-winning science writer, with degrees in Biochemistry and Science Communication.</p>\n    </div>\n    <div class=\"row break\">\n      <div class=\"col-8 offset-2 text-center\">\n        <img src=\"assets/cross_everything_cover.jpg\" class=\"img-fluid\" alt=\"Cover for Cross Everthing\">\n      </div>\n    </div>\n    <div class=\"row break\">\n      <div class=\"col-12\">\n      <div class=\"card\">\n        <div class=\"card-body\">\n          <blockquote class=\"blockquote mb-0\">\n            <p>\"A moving, compelling and vital book, that sheds much needed light on the very latest understanding of cancer.\"</p>\n            <footer class=\"blockquote-footer\"><cite title=\"Source Title\"> Siddhartha Mukherjee</cite>, author of The Emperor of All Maladies</footer>\n          </blockquote>\n        </div>\n      </div>\n    </div>\n    </div>\n    <div class=\"row break\">\n      <div class=\"col-12\">\n      <div class=\"card\">\n        <div class=\"card-body\">\n          <blockquote class=\"blockquote mb-0\">\n            <p>\"Sensitive and informed. Essential reading for anyone supporting a loved one through cancer.\"</p>\n            <footer class=\"blockquote-footer\"><cite title=\"Source Title\">Deborah James</cite>, writer and broadcaster</footer>\n         </blockquote>\n        </div>\n      </div>\n      </div>\n    </div>\n    \n    <!-- <router-outlet></router-outlet>  -->\n  </div> ",
+                template: "<div class=\"col-10 offset-1\">\n    <div class=\"row\">\n      <h2>Cross Everything</h2>\n    </div>\n    <div class=\"row break\"> \n    <p>Publishes 18th February 2021 on Bloomsbury/Green Tree</p>\n    </div>\n    <div class=\"row break\">\n      <p>Henry Scowcroft is an experienced, award-winning science writer, with degrees in Biochemistry and Science Communication.</p>\n    </div>\n    <div class=\"row break\">\n      <div class=\"col-8 offset-2 text-center\">\n        <img src=\"assets/cross_everything_cover.jpg\" class=\"img-fluid\" alt=\"Cover for Cross Everthing\">\n      </div>\n    </div>\n    <div class=\"row break\">\n      <div class=\"col-12\">\n      <div class=\"card\">\n        <div class=\"card-body\">\n          <blockquote class=\"blockquote mb-0\">\n            <p>\"A moving, compelling and vital book, that sheds much needed light on the very latest understanding of cancer.\"</p>\n            <footer class=\"blockquote-footer\"><cite title=\"Source Title\"> Siddhartha Mukherjee</cite>, author of The Emperor of All Maladies</footer>\n          </blockquote>\n        </div>\n      </div>\n    </div>\n    </div>    \n  </div> ",
                 styles: [".break,.card{padding-bottom:30px}"]
+            }]
+    }], function () { return []; }, null); })();
+
+class QuoteBlockComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+QuoteBlockComponent.ɵfac = function QuoteBlockComponent_Factory(t) { return new (t || QuoteBlockComponent)(); };
+QuoteBlockComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: QuoteBlockComponent, selectors: [["app-quote-block"]], decls: 11, vars: 0, consts: [[1, "row", "break"], [1, "col-12"], [1, "card"], [1, "card-body"], [1, "blockquote", "mb-0"], [1, "blockquote-footer"], ["title", "Source Title"]], template: function QuoteBlockComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div", 0);
+        ɵngcc0.ɵɵelementStart(1, "div", 1);
+        ɵngcc0.ɵɵelementStart(2, "div", 2);
+        ɵngcc0.ɵɵelementStart(3, "div", 3);
+        ɵngcc0.ɵɵelementStart(4, "blockquote", 4);
+        ɵngcc0.ɵɵelementStart(5, "p");
+        ɵngcc0.ɵɵtext(6, "\"Sensitive and informed. Essential reading for anyone supporting a loved one through cancer.\"");
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(7, "footer", 5);
+        ɵngcc0.ɵɵelementStart(8, "cite", 6);
+        ɵngcc0.ɵɵtext(9, "Deborah James");
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵtext(10, ", writer and broadcaster");
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } }, styles: [""] });
+QuoteBlockComponent.ctorParameters = () => [];
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(QuoteBlockComponent, [{
+        type: Component,
+        args: [{
+                selector: 'app-quote-block',
+                template: "<div class=\"row break\">\n    <div class=\"col-12\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <blockquote class=\"blockquote mb-0\">\n          <p>\"Sensitive and informed. Essential reading for anyone supporting a loved one through cancer.\"</p>\n          <footer class=\"blockquote-footer\"><cite title=\"Source Title\">Deborah James</cite>, writer and broadcaster</footer>\n       </blockquote>\n      </div>\n    </div>\n    </div>\n  </div>",
+                styles: [""]
             }]
     }], function () { return []; }, null); })();
 
@@ -83,12 +101,12 @@ class ServerlessCmsModule {
 }
 ServerlessCmsModule.ɵmod = ɵngcc0.ɵɵdefineNgModule({ type: ServerlessCmsModule });
 ServerlessCmsModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function ServerlessCmsModule_Factory(t) { return new (t || ServerlessCmsModule)(); } });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(ServerlessCmsModule, { declarations: [HomepageComponent], exports: [HomepageComponent] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(ServerlessCmsModule, { declarations: [HomepageComponent, QuoteBlockComponent], exports: [HomepageComponent, QuoteBlockComponent] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(ServerlessCmsModule, [{
         type: NgModule,
         args: [{
-                declarations: [HomepageComponent],
-                exports: [HomepageComponent]
+                declarations: [HomepageComponent, QuoteBlockComponent],
+                exports: [HomepageComponent, QuoteBlockComponent]
             }]
     }], null, null); })();
 
@@ -96,6 +114,6 @@ ServerlessCmsModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function Serve
  * Generated bundle index. Do not edit.
  */
 
-export { HomepageComponent, ServerlessCmsModule };
+export { HomepageComponent, QuoteBlockComponent, ServerlessCmsModule };
 
 //# sourceMappingURL=serverless-cms-lib.js.map

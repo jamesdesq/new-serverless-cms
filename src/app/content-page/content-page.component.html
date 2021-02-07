@@ -1,6 +1,6 @@
 <div class="col-10 offset-1">
     <div *ngIf="content">
-        <h1 [ngClass]="'first second'">{{content.title}}</h1>
+        <h1 *ngIf="showTitle" [ngClass]="'first second'">{{content.title}}</h1>
         <div class="mb-1 text-muted">Posted by Henry on {{ content.date | date: 'longDate' }}</div>
         <script src="https://gist.github.com/jamesdesq/3786dd93e13a306874443ebd9e8a8bf8.js"></script>
         <div *ngFor="let paragraph of content.bodyText">
@@ -27,6 +27,9 @@
             </div>
             <div *ngSwitchCase="'app-bar'">
               <app-bar [content]="paragraph.content"></app-bar>
+            </div>
+            <div *ngSwitchCase="'app-quote-block'">
+              <app-quote-block></app-quote-block>
             </div>
             <div *ngSwitchCase="'bar-overlay'">
               <app-bar-overlay [content]="paragraph.content"></app-bar-overlay>

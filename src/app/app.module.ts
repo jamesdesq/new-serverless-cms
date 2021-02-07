@@ -9,19 +9,19 @@ import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { TitlebarComponent } from './titlebar/titlebar.component';
 import { ContentPageComponent } from './content-page/content-page.component';
-// import { HomepageComponent } from 'serverless-cms-lib/dist/public-api';
+import { ServerlessCmsModule } from 'serverless-cms-lib';
 
 @NgModule({
   declarations: [
     AppComponent,
     MailformComponent,
-    // HomepageComponent,
     ContentPageComponent,
     MenuComponent,
     TitlebarComponent
   ],
   imports: [
     BrowserModule,
+    ServerlessCmsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,

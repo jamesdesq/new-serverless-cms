@@ -23,7 +23,6 @@ export class ContentFlattenerService {
 
     if (content['nodeType']) { 
       switch (content['nodeType']) { 
-
         case 'paragraph': 
 
           flattened = this.flattenParagraph(content);
@@ -176,6 +175,16 @@ export class ContentFlattenerService {
             content: entry
           }
           break;
+
+        case 'quoteBlock': 
+
+          flattened = { 
+            type: 'app-quote-block',
+            content: entry,
+          }
+
+          break;
+
       }
     }
     return flattened;
