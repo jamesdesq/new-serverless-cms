@@ -178,6 +178,7 @@ export class ContentFlattenerService {
 
         case 'quoteBlock': 
 
+          console.log(entry);
           flattened = { 
             type: 'app-quote-block',
             content: entry,

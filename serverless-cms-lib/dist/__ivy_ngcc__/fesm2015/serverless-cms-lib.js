@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 
 import * as ɵngcc0 from '@angular/core';
 class HomepageComponent {
@@ -66,36 +66,48 @@ class QuoteBlockComponent {
     }
 }
 QuoteBlockComponent.ɵfac = function QuoteBlockComponent_Factory(t) { return new (t || QuoteBlockComponent)(); };
-QuoteBlockComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: QuoteBlockComponent, selectors: [["app-quote-block"]], decls: 11, vars: 0, consts: [[1, "row", "break"], [1, "col-12"], [1, "card"], [1, "card-body"], [1, "blockquote", "mb-0"], [1, "blockquote-footer"], ["title", "Source Title"]], template: function QuoteBlockComponent_Template(rf, ctx) { if (rf & 1) {
+QuoteBlockComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: QuoteBlockComponent, selectors: [["app-quote-block"]], inputs: { content: "content" }, decls: 11, vars: 3, consts: [[1, "row", "break"], [1, "col-12"], [1, "card"], [1, "card-body"], [1, "blockquote", "mb-0"], [1, "blockquote-footer"], ["title", "Source Title"]], template: function QuoteBlockComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵelementStart(2, "div", 2);
         ɵngcc0.ɵɵelementStart(3, "div", 3);
         ɵngcc0.ɵɵelementStart(4, "blockquote", 4);
         ɵngcc0.ɵɵelementStart(5, "p");
-        ɵngcc0.ɵɵtext(6, "\"Sensitive and informed. Essential reading for anyone supporting a loved one through cancer.\"");
+        ɵngcc0.ɵɵtext(6);
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementStart(7, "footer", 5);
         ɵngcc0.ɵɵelementStart(8, "cite", 6);
-        ɵngcc0.ɵɵtext(9, "Deborah James");
+        ɵngcc0.ɵɵtext(9);
         ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵtext(10, ", writer and broadcaster");
-        ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵtext(10);
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(6);
+        ɵngcc0.ɵɵtextInterpolate(ctx.content.quoteText);
+        ɵngcc0.ɵɵadvance(3);
+        ɵngcc0.ɵɵtextInterpolate(ctx.content.source);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵtextInterpolate1(", ", ctx.content.qualification, "");
     } }, styles: [""] });
 QuoteBlockComponent.ctorParameters = () => [];
+QuoteBlockComponent.propDecorators = {
+    content: [{ type: Input }]
+};
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(QuoteBlockComponent, [{
         type: Component,
         args: [{
                 selector: 'app-quote-block',
-                template: "<div class=\"row break\">\n    <div class=\"col-12\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <blockquote class=\"blockquote mb-0\">\n          <p>\"Sensitive and informed. Essential reading for anyone supporting a loved one through cancer.\"</p>\n          <footer class=\"blockquote-footer\"><cite title=\"Source Title\">Deborah James</cite>, writer and broadcaster</footer>\n       </blockquote>\n      </div>\n    </div>\n    </div>\n  </div>",
+                template: "<div class=\"row break\">\n    <div class=\"col-12\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <blockquote class=\"blockquote mb-0\">\n          <p>{{ content.quoteText }}</p>\n          <footer class=\"blockquote-footer\"><cite title=\"Source Title\">{{ content.source }}</cite>, {{ content.qualification }}</footer>\n       </blockquote>\n      </div>\n    </div>\n    </div>\n  </div>",
                 styles: [""]
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return []; }, { content: [{
+            type: Input
+        }] }); })();
 
 class ServerlessCmsModule {
 }

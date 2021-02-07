@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 
 class HomepageComponent {
     constructor() { }
@@ -22,11 +22,14 @@ class QuoteBlockComponent {
 QuoteBlockComponent.decorators = [
     { type: Component, args: [{
                 selector: 'app-quote-block',
-                template: "<div class=\"row break\">\n    <div class=\"col-12\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <blockquote class=\"blockquote mb-0\">\n          <p>\"Sensitive and informed. Essential reading for anyone supporting a loved one through cancer.\"</p>\n          <footer class=\"blockquote-footer\"><cite title=\"Source Title\">Deborah James</cite>, writer and broadcaster</footer>\n       </blockquote>\n      </div>\n    </div>\n    </div>\n  </div>",
+                template: "<div class=\"row break\">\n    <div class=\"col-12\">\n    <div class=\"card\">\n      <div class=\"card-body\">\n        <blockquote class=\"blockquote mb-0\">\n          <p>{{ content.quoteText }}</p>\n          <footer class=\"blockquote-footer\"><cite title=\"Source Title\">{{ content.source }}</cite>, {{ content.qualification }}</footer>\n       </blockquote>\n      </div>\n    </div>\n    </div>\n  </div>",
                 styles: [""]
             },] }
 ];
 QuoteBlockComponent.ctorParameters = () => [];
+QuoteBlockComponent.propDecorators = {
+    content: [{ type: Input }]
+};
 
 class ServerlessCmsModule {
 }
