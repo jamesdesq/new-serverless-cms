@@ -1,0 +1,12 @@
+import { NgModule } from '@angular/core';
+import { HomepageComponent } from './homepage/homepage.component';
+import { QuoteBlockComponent } from './quote-block/quote-block.component';
+export class ServerlessCmsModule {
+}
+ServerlessCmsModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [HomepageComponent, QuoteBlockComponent],
+                exports: [HomepageComponent, QuoteBlockComponent]
+            },] }
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VydmVybGVzcy1jbXMubW9kdWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL3NlcnZlcmxlc3MtY21zLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxpQkFBaUIsRUFBRSxNQUFNLCtCQUErQixDQUFDO0FBQ2xFLE9BQU8sRUFBRSxtQkFBbUIsRUFBRSxNQUFNLHFDQUFxQyxDQUFDO0FBTTFFLE1BQU0sT0FBTyxtQkFBbUI7OztZQUovQixRQUFRLFNBQUM7Z0JBQ04sWUFBWSxFQUFFLENBQUMsaUJBQWlCLEVBQUUsbUJBQW1CLENBQUM7Z0JBQ3RELE9BQU8sRUFBRSxDQUFDLGlCQUFpQixFQUFFLG1CQUFtQixDQUFDO2FBQ3BEIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEhvbWVwYWdlQ29tcG9uZW50IH0gZnJvbSAnLi9ob21lcGFnZS9ob21lcGFnZS5jb21wb25lbnQnO1xuaW1wb3J0IHsgUXVvdGVCbG9ja0NvbXBvbmVudCB9IGZyb20gJy4vcXVvdGUtYmxvY2svcXVvdGUtYmxvY2suY29tcG9uZW50JztcblxuQE5nTW9kdWxlKHtcbiAgICBkZWNsYXJhdGlvbnM6IFtIb21lcGFnZUNvbXBvbmVudCwgUXVvdGVCbG9ja0NvbXBvbmVudF0sXG4gICAgZXhwb3J0czogW0hvbWVwYWdlQ29tcG9uZW50LCBRdW90ZUJsb2NrQ29tcG9uZW50XVxufSlcbmV4cG9ydCBjbGFzcyBTZXJ2ZXJsZXNzQ21zTW9kdWxlIHt9Il19

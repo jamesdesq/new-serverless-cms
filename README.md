@@ -36,3 +36,10 @@ This article proved quite useful:
 
 https://www.smashingmagazine.com/2018/05/building-serverless-contact-form-static-website/
 
+
+## Notes 
+
+### Making the quote block in the library
+
+1. `cd serverless-cms-lib` then `ng generate component quoteBlock`
+2. Do whatever you want to your component, then run `npm run build-lib`. Your imports will go squiffy, so do `npm install cms-serverless-lib` and it should fix it.

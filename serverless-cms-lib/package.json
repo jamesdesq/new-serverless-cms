@@ -1,0 +1,13 @@
+{
+    "name": "serverless-cms-lib",
+    "version": "0.0.1",
+    "peerDependencies": {
+        "@angular/core": ">=7.0.0"
+    },
+    "ngPackage": {
+        "lib": {
+            "entryFile": "public-api.ts"
+        },
+        "dest": "dist"
+    }
+}

@@ -32,6 +32,10 @@ export class ContentfulService {
 
   getContentItemByUrl(search: string, contentType: string): Observable<any> {
 
+    if (!search) { 
+      search = 'homepage';
+    }
+
     const path = `/spaces/${CONFIG.space}/environments/master/entries?access_token=${CONFIG.accessToken}&content_type=${contentType}&fields.url=${search}`;
     const url =  'https://cdn.contentful.com' + path;
 
