@@ -1,4 +1,5 @@
-<div class="col-10 offset-1">
+<div class="row">
+  <div class="col-10 offset-1">
     <div *ngIf="content">
         <h1 *ngIf="showTitle" [ngClass]="'first second'">{{content.title}}</h1>
         <div *ngIf="contentType=='blog'" class="mb-1 text-muted">Posted by Henry on {{ content.date | date: 'longDate' }}</div>
@@ -43,4 +44,5 @@
       <div *ngIf="!content">
         <h2>Nothing here...</h2>
       </div>
+  </div>
 </div>
