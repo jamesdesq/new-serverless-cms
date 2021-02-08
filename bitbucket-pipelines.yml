@@ -7,6 +7,7 @@ pipelines:
           # - node -v
           - npm install
           - npm install -g @angular/cli
+          - ng build contentful-connector
           - ng build --prod
           - cd dist/scowsite
           - aws s3 ls s3://henryscowcroft.net
