@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as R from 'ramda';
-import { environment } from './../../environments/environment';
+// import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -157,6 +157,10 @@ export class ContentFlattenerService {
     const ids = R.path(path);
 
     const entry = this.entryMap[ids(content)];
+
+    let environment = { 
+      defaultImageUrl: '',
+    }
 
     if (entry.entryType) { 
       switch (entry.entryType) { 
