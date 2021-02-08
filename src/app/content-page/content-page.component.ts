@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { ContentFlattenerService } from '../services/content-flattener.service';
-import { ContentfulService } from '../services/contentful.service';
-import { IncludesFinderService } from '../services/includes-finder.service';
+import { ContentFlattenerService } from 'contentful-connector';
+import { ContentfulService } from 'contentful-connector';
+import { IncludesFinderService } from 'contentful-connector';
 
 @Component({
   selector: 'app-content-page',

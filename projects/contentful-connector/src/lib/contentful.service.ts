@@ -1,15 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
-import { environment } from './../../environments/environment';
-import { catchError, retry } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-
-const CONFIG = {
-  space: environment.space,
-  accessToken: environment.accessToken,
-}
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +10,14 @@ const CONFIG = {
 
 export class ContentfulService {
 
+  CONFIG = {
+    space: this.environment.space,
+    accessToken: this.environment.accessToken,
+  }
+
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    @Inject('env') private environment
   ) {
   }
 
@@ -36,7 +35,7 @@ export class ContentfulService {
       search = 'homepage';
     }
 
-    const path = `/spaces/${CONFIG.space}/environments/master/entries?access_token=${CONFIG.accessToken}&content_type=${contentType}&fields.url=${search}`;
+    const path = `/spaces/${this.CONFIG.space}/environments/master/entries?access_token=${this.CONFIG.accessToken}&content_type=${contentType}&fields.url=${search}`;
     const url =  'https://cdn.contentful.com' + path;
 
     return this.http.get(url, this.createHeaders());
