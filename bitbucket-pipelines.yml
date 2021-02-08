@@ -7,7 +7,7 @@ pipelines:
           # - node -v
           - npm install
           - npm install -g @angular/cli
-          - ng build -–aot
+          - ng build --aot
           - cd dist/scowsite
           - aws s3 ls s3://henryscowcroft.net
           - aws s3 sync . s3://henryscowcroft.net
