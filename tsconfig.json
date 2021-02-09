@@ -19,6 +19,10 @@
       "contentful-connector": [
         "dist/contentful-connector/contentful-connector",
         "dist/contentful-connector"
+      ],
+      "scms-component-library": [
+        "dist/scms-component-library/scms-component-library",
+        "dist/scms-component-library"
       ]
     }
   }

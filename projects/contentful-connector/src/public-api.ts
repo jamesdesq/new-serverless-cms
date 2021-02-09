@@ -5,3 +5,4 @@
 export * from './lib/content-flattener.service';
 export * from './lib/contentful.service';
 export * from './lib/includes-finder.service';
+export * from './lib/contentful-connector.module';

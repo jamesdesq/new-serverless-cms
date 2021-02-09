@@ -166,6 +166,46 @@
           }
         }
       }
+    },
+    "scms-component-library": {
+      "projectType": "library",
+      "root": "projects/scms-component-library",
+      "sourceRoot": "projects/scms-component-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/scms-component-library/tsconfig.lib.json",
+            "project": "projects/scms-component-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/scms-component-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scms-component-library/src/test.ts",
+            "tsConfig": "projects/scms-component-library/tsconfig.spec.json",
+            "karmaConfig": "projects/scms-component-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scms-component-library/tsconfig.lib.json",
+              "projects/scms-component-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "scowsite",
