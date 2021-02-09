@@ -7,8 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build-lib": "ng-packagr -p serverless-cms-lib/package.json"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +23,6 @@
     "jquery": "^3.5.1",
     "ramda": "^0.27.1",
     "rxjs": "~6.6.0",
-    "serverless-cms-lib": "file:serverless-cms-lib/dist",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

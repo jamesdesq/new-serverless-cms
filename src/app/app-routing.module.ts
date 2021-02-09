@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomepageComponent } from 'serverless-cms-lib';
 import { ContentPageComponent } from './content-page/content-page.component';
 import { MailformComponent } from './mailform/mailform.component';
 
