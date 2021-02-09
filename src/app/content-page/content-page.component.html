@@ -32,8 +32,7 @@
               <app-bar [content]="paragraph.content"></app-bar>
             </div>
             <div *ngSwitchCase="'app-quote-block'">
-              <pre>{{ paragraph.content | json }}</pre>
-              <app-quote-block [content]="paragraph.content"></app-quote-block>
+              <lib-quote-block [content]="paragraph.content"></lib-quote-block>
             </div>
             <div *ngSwitchCase="'bar-overlay'">
               <app-bar-overlay [content]="paragraph.content"></app-bar-overlay>

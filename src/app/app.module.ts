@@ -11,7 +11,7 @@ import { TitlebarComponent } from './titlebar/titlebar.component';
 import { ContentPageComponent } from './content-page/content-page.component';
 import { ContentfulConnectorModule } from 'contentful-connector';
 import { environment } from 'src/environments/environment';
-import { ScmsComponentLibraryModule, SharedTitlebarModule } from 'projects/scms-component-library/src/public-api';
+import { ScmsComponentLibraryModule, SharedTitlebarModule, QuoteBlockModule } from 'projects/scms-component-library/src/public-api';
 
 
 @NgModule({
@@ -30,6 +30,7 @@ import { ScmsComponentLibraryModule, SharedTitlebarModule } from 'projects/scms-
     CommonModule,
     ScmsComponentLibraryModule,
     SharedTitlebarModule,
+    QuoteBlockModule,
     ContentfulConnectorModule.forRoot(environment)
   ],
   providers: [],
