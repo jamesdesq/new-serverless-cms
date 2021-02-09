@@ -9,9 +9,10 @@ import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { TitlebarComponent } from './titlebar/titlebar.component';
 import { ContentPageComponent } from './content-page/content-page.component';
-import { ServerlessCmsModule } from 'serverless-cms-lib';
-import { ContentfulConnectorModule } from 'projects/contentful-connector/src/lib/contentful-connector.module';
+import { ContentfulConnectorModule } from 'contentful-connector';
 import { environment } from 'src/environments/environment';
+import { ScmsComponentLibraryModule, SharedTitlebarModule, QuoteBlockModule } from 'projects/scms-component-library/src/public-api';
+
 
 @NgModule({
   declarations: [
@@ -23,11 +24,13 @@ import { environment } from 'src/environments/environment';
   ],
   imports: [
     BrowserModule,
-    ServerlessCmsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
+    ScmsComponentLibraryModule,
+    SharedTitlebarModule,
+    QuoteBlockModule,
     ContentfulConnectorModule.forRoot(environment)
   ],
   providers: [],

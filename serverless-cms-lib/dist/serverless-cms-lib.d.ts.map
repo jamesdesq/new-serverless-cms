@@ -1,1 +1,0 @@
-{"version":3,"file":"serverless-cms-lib.d.ts","sources":["serverless-cms-lib.d.ts"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","sourcesContent":["/**\n * Generated bundle index. Do not edit.\n */\nexport * from './public-api';\n"]}

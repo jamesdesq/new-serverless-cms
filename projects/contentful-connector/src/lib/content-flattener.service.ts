@@ -1,7 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import * as R from 'ramda';
-// import { environment } from 'src/environments/environment';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +9,9 @@ export class ContentFlattenerService {
 
   public entryMap = {};
 
-  constructor() { }
+  constructor(
+    @Inject('env') private environment
+  ) { }
 
   flatten(content: object, assetMap: object, entryMap: object): object { 
 
@@ -158,15 +158,11 @@ export class ContentFlattenerService {
 
     const entry = this.entryMap[ids(content)];
 
-    let environment = { 
-      defaultImageUrl: '',
-    }
-
     if (entry.entryType) { 
       switch (entry.entryType) { 
         case 'popOutCard':
           const imageIdPath = R.path(['cardImage', 'sys', 'id']);
-          entry['cardImage'] = this.assetMap[imageIdPath(entry)] ? this.assetMap[imageIdPath(entry)] : environment.defaultImageUrl;
+          entry['cardImage'] = this.assetMap[imageIdPath(entry)] ? this.assetMap[imageIdPath(entry)] : this.environment.defaultImageUrl;
           flattened = {
             type: 'app-popout-card',
             content: entry
