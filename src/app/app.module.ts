@@ -9,8 +9,10 @@ import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { TitlebarComponent } from './titlebar/titlebar.component';
 import { ContentPageComponent } from './content-page/content-page.component';
-import { ContentfulConnectorModule } from 'projects/contentful-connector/src/lib/contentful-connector.module';
+import { ContentfulConnectorModule } from 'contentful-connector';
 import { environment } from 'src/environments/environment';
+import { ScmsComponentLibraryModule, SharedTitlebarModule } from 'projects/scms-component-library/src/public-api';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
+    ScmsComponentLibraryModule,
+    SharedTitlebarModule,
     ContentfulConnectorModule.forRoot(environment)
   ],
   providers: [],

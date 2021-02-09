@@ -4,9 +4,13 @@ import { ScmsComponentLibraryComponent } from './scms-component-library.componen
 
 
 @NgModule({
-  declarations: [ScmsComponentLibraryComponent],
+  declarations: [
+    ScmsComponentLibraryComponent,
+  ],
   imports: [
   ],
-  exports: [ScmsComponentLibraryComponent]
+  exports: [
+    ScmsComponentLibraryComponent,
+  ]
 })
 export class ScmsComponentLibraryModule { }
