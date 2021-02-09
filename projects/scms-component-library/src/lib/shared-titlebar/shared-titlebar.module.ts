@@ -5,9 +5,14 @@ import { SharedTitlebarComponent } from './shared-titlebar.component';
 
 
 @NgModule({
-  declarations: [SharedTitlebarComponent],
+  declarations: [
+    SharedTitlebarComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SharedTitlebarComponent
   ]
 })
 export class SharedTitlebarModule { }
