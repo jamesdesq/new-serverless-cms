@@ -13,7 +13,10 @@ pipelines:
           - aws s3 sync . s3://henryscowcroft.net
           - git remote add sync git@github.com:jamesdesq/new-serverless-cms.git
           - git checkout -b feature/publish-to-github
+          - pwd
+          - ls -al
           - rm -rf ./src/environments
+          - git status
           - git add . 
           - git commit -m "Syncing to Github" 
           - git push sync feature/publish-to-github:master
